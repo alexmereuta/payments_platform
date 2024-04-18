@@ -1,3 +1,15 @@
+PATH
+  remote: engines/customer_engine
+  specs:
+    customer_engine (0.1.0)
+      rails (~> 6.1.7, >= 6.1.7.7)
+
+PATH
+  remote: engines/payment_engine
+  specs:
+    payment_engine (0.1.0)
+      rails (~> 6.1.7, >= 6.1.7.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -225,8 +237,10 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  customer_engine!
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  payment_engine!
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.5, >= 6.1.5.1)
