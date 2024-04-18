@@ -12,5 +12,5 @@ customers = CustomerEngine::Customer.create!([
 ])
 
 customers.each do |customer|
-  PaymentEngine::Payment.create!(customer_id: customer.uuid, amount: (rand * 100).round(2), currency: ["EUR", "USD", "CAD"].sample)
+  PaymentEngine::Payment.create!(customer_id: customer.id, amount: (rand * 100).round(2), currency: ["EUR", "USD", "CAD"].sample)
 end

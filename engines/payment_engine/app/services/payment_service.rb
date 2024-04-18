@@ -1,6 +1,6 @@
 class PaymentService
-  def enrich_payment(payment, customer_facade)
-    customer = customer_facade.find_by_id(payment.customer_id)
+  def enrich_payment(payment)
+    customer = CustomerEngine::CustomerFacade.new.find_by_id(payment.customer_id)
 
     enriched_data = {
       customer_name: customer.name,
