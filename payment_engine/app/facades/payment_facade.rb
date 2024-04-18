@@ -1,9 +1,10 @@
 class PaymentFacade
-  def create(payment_params)
-    PaymentRepository.create(payment_params)
-  end
+  def find_and_enrich_payment(payment_id, customer_facade)
+    payment = PaymentRepository.find_by_id(payment_id)
+    raise "Payment not found" unless payment
 
-  def find_by_id(payment_id)
-    PaymentRepository.find_by_id(payment_id)
+    enriched_data = PaymentService.new.enrich_payment(payment, customer_facade)
+
+    enriched_data
   end
 end
