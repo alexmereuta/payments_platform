@@ -55,5 +55,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'customer_engine', path: 'customer_engine'
-gem 'payment_engine', path: 'payment_engine'
+gem 'customer_engine', path: 'engines/customer_engine'
+gem 'payment_engine', path: 'engines/payment_engine'
